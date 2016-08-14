@@ -1,10 +1,57 @@
 [
   {
-    "repository": "android_device_oppo_common",
-    "target_path": "device/oppo/common"
+    "repository" : "Shreeesha/device_oppo_common",
+    "target_path": "device/oppo/common",
+    "branch"     : "caf"
   },
   {
-    "repository": "android_kernel_oneplus_msm8994",
-    "target_path": "kernel/oneplus/msm8994"
-  }
+    "repository" : "Shreeesha/android_kernel_oneplus_msm8994",
+    "target_path": "kernel/oneplus/msm8994",
+    "branch"     : "m-caf"
+  },
+  {
+   "repository" : "DirtyUnicorns/android_external_connectivity",
+   "target_path": "external/connectivity",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_vendor_qcom_opensource_dataservices",
+   "target_path": "vendor/qcom/opensource/dataservices",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_system_qcom",
+   "target_path": "system/qcom",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_external_ant-wireless_ant_service",
+   "target_path": "external/ant-wireless/ant_service",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_external_ant-wireless_ant_native",
+   "target_path": "external/ant-wireless/ant_native",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_external_ant-wireless_antradio-library",
+   "target_path": "external/ant-wireless/antradio-library",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_external_libnetfilter_conntrack",
+   "target_path": "external/libnetfilter_conntrack",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "DirtyUnicorns/android_external_libnfnetlink",
+   "target_path": "external/libnfnetlink",
+   "branch"     : "m-caf"
+ },
+ {
+   "repository" : "Shreeeesha/android_vendor_oneplus",
+   "target_path": "vendor/oneplus",
+   "branch"     : "m-caf"
+ }
 ]
