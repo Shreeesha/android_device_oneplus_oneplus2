@@ -50,6 +50,11 @@
    "branch"     : "m-caf"
  },
  {
+   "repository" : "Shreeesha/Snap",
+   "target_path": "packages/apps/Snap",
+   "branch"     : "m-caf"
+ },
+ {
    "repository" : "Shreeeesha/android_vendor_oneplus",
    "target_path": "vendor/oneplus",
    "branch"     : "m-caf"
