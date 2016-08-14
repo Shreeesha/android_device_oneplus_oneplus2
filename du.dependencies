@@ -1,6 +1,6 @@
 [
   {
-    "repository" : "Shreeesha/device_oppo_common",
+    "repository" : "DirtyUnicorns/device_oppo_common",
     "target_path": "device/oppo/common",
     "branch"     : "caf"
   },
