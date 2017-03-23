@@ -331,8 +331,12 @@
          provisioning, availability etc -->
     <bool name="config_carrier_vt_available">true</bool>
 
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">true</bool>
+
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
+
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
