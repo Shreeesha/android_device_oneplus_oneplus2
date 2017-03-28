@@ -102,6 +102,7 @@ vendor/lib/libmmqjpegdma.so
 vendor/lib/liboemcamera.so
 vendor/lib/libois_rohm_bu63165gwl.so
 vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_sensor_debug.so
@@ -312,6 +313,8 @@ vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
+vendor/lib64/libloc_ext.so
+vendor/lib64/libloc_xtra.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libquipc_os_api.so
@@ -504,6 +507,15 @@ vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
 -vendor/app/ims/ims.apk|21f343af6b656ad1dc890b18fed940ad61e31fb0
 -vendor/app/imssettings/imssettings.apk|87ada7621f77f9cf8efa27ebb46157c98df3a7cc
+
+# Radio - MBN
+etc/firmware/mbn_ota/mcfg_sw/mbn_ota.txt
+etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_ATT-VoLTE.mbn
+etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_CMCC_CSFB_DSDS_Commercial_Volte.mbn
+etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_CU_OpenMkt-Commercial.mbn
+etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_OEM_Overseas-Commercial.mbn
+etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_Reliance-Commercial.mbn
+etc/firmware/mbn_ota/mcfg_sw/mcfg_sw_TMO-Commercial.mbn
 
 # Sensors
 bin/sensors.qcom
