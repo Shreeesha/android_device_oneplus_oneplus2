@@ -1,27 +1,35 @@
+#
 # system.prop for OnePlus2
+#
 
 # Audio
-audio.offload.video=true
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-ro.qc.sdk.audio.fluencetype=fluence
-ro.qc.sdk.audio.ssr=false
-persist.audio.ssr.3mic=false
-media.aac_51_output_enabled=true
+audio.deep_buffer.media=true
+audio.offload.buffer.size.kb=32
+audio.offload.gapless.enabled=true
+audio.offload.min.duration.secs=30
+audio.offload.multiple.enabled=true
+audio.offload.passthrough=false
 audio.offload.pcm.16bit.enable=true
 audio.offload.pcm.24bit.enable=true
-use.voice.path.for.pcm.voip=true
-audio.offload.multiple.enabled=true
-audio.offload.gapless.enabled=true
+audio.offload.track.enable=true
+audio.offload.video=true
+media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
-audio.offload.buffer.size.kb=32
-tunnel.audio.encode=false
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.ssr.3mic=false
+ro.qc.sdk.audio.fluencetype=fluence
+ro.qc.sdk.audio.ssr=false
+qcom.hw.aac.encoder=true
+use.voice.path.for.pcm.voip=true
 
 # Bluetooth
+bluetooth.enable_timeout_ms=12000
 bluetooth.hfp.client=1
+bt.max.hfpclient.connections=1
 qcom.bluetooth.soc=rome
-ro.bluetooth.a4wp=true
+ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 
 # Camera
@@ -29,95 +37,119 @@ persist.camera.HAL3.enabled=0
 persist.camera.cpp.duplication=false
 vidc.debug.perf.mode=2
 vidc.enc.dcvs.extra-buff-count=2
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 
 # CEC
-ro.hdmi.device_type=4
-persist.sys.hdmi.addr.playback=4
-ro.hdmi.enable=true
 persist.speaker.prot.enable=false
 persist.spkr.cal.duration=0
+persist.sys.hdmi.addr.playback=4
 qcom.hw.aac.encoder=true
+ro.hdmi.enable=true
 
 # CNE
 persist.cne.feature=1
 
-# Data Power Manager (DPM)
+# CoreSight
+persist.debug.coresight.config=stm-events
+
+# Data modules
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+persist.data.mode=concurrent
+ro.data.large_tcp_window_size=true
+
+# DPM 
 persist.dpm.feature=7
 persist.env.fastdorm.enabled=true
 persist.sys.dpmd.nsrm=3
 
-# Debug logging for DPM & CNE can be enabled via:
-# Push libdpmlog.so to system/vendor/lib|64
-#persist.dpm.nsrm.bkg.evt=3955
-#persist.dpm.loglevel=7825
+# Google Assistant
+ro.opa.eligible_device=true
 
-# Dex2oat limits
-dalvik.vm.boot-dex2oat-threads=4
-dalvik.vm.dex2oat-threads=2
-dalvik.vm.image-dex2oat-threads=4
-
-# GPS
-persist.gps.qc_nlp_in_use=1
-persist.loc.nlp_name=com.qualcomm.location
-ro.gps.agps_provider=1
-ro.pip.gated=0
+# Google WFD 
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
 
 # Graphics
-persist.hwc.mdpcomp.enable=true
 dalvik.vm.heapsize=36m
+debug.composition.type=c2d
+debug.egl.hw=1
+debug.mdpcomp.logs=0
+debug.sf.hw=1
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+persist.hwc.enable_vds=1
+persist.hwc.mdpcomp.enable=true
+persist.hwc.mdpcomp.maxpermixer=5
+persist.hwc.ptor.enable=true
+persist.mdpcomp.4k2kSplit=1
+persist.mdpcomp_perfhint=50
+persist.metadata_dynfps.disable=true
+ro.opengles.version=196610
 ro.qualcomm.cabl=0
 ro.sf.lcd_density=480
-ro.opengles.version=196610
 
-# QC vendor extension
+# IMS
+persist.volte_enabled_by_hw=1
+persist.data.iwlan.enable=true
+
+# Media
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.legacyencoder=true *get camera to work with mm blobs
+media.stagefright.less-secure=true *get camera to work with mm blobs
+media.stagefright.log-uri=1
+mmp.enable.3g2=true
+
+# Navigation bar
+qemu.hw.mainkeys=1
+
+# Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.frp.pst=/dev/block/bootdevice/by-name/config
+
+# QCOM
 drm.service.enabled=true
+ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # RIL
-rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
+DEVICE_PROVISIONED=1
+persist.data.qmi.adb_logmask=0
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.hw_mbn_update=0
+persist.radio.multisim.config=dsds
+persist.radio.rat_on=combine
+persist.radio.sib16_support=1
+persist.radio.start_ota_daemon=1
+persist.radio.sw_mbn_update=0
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
 persist.rild.nitz_long_ons_2=
 persist.rild.nitz_long_ons_3=
+persist.rild.nitz_plmn=
 persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
+rild.libargs=-d /dev/smd0
+rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+telephony.lteOnCdmaDevice=1
 telephony.lteOnGsmDevice=1
-persist.radio.multisim.config=dsds
-persist.radio.apm_sim_not_pwdn=1
-persist.radio.sib16_support=1
-persist.radio.sw_mbn_update=0
-persist.radio.start_ota_daemon=1
-persist.radio.rat_on=combine
-persist.data.qmi.adb_logmask=0
 
 # Sensors
-ro.qc.sdk.sensors.gestures=true
-ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.gestures.camera=false
+ro.qc.sdk.sensors.gestures=true
 
 # Storage
+persist.fuse_sdcard=true
 ro.sys.sdcardfs=true
 
 # Time services
 persist.timed.enable=true
 
-# Wifi
-persist.data.iwlan.enable=true
-
-# VoLTE
-persist.dbg.ims_volte_enable=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=0
-persist.dbg.wfc_avail_ovr=0
-
-# Google Assistant
-ro.opa.eligible_device=true
+# Zram disk
+ro.config.zram=true
