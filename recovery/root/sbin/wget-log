@@ -1,0 +1,12 @@
+--2017-10-12 04:39:32--  https://gerrit.twrp.me/changes/1379/revisions/1/patch?zip
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving gerrit.twrp.me... 199.168.142.244
+Connecting to gerrit.twrp.me|199.168.142.244|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘patch?zip’
+
+patch?zip                                 [<=>                                                                    ]       0  --.-KB/s               patch?zip                                 [ <=>                                                                   ]   5.26K  --.-KB/s    in 0s      
+
+2017-10-12 04:39:34 (391 MB/s) - ‘patch?zip’ saved [5389]
+
