@@ -31,6 +31,9 @@ vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libhwdaphal.so
 
+# Audio amplifier calibration sound
+etc/silence_short.wav
+
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
