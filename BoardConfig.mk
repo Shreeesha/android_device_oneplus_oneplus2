@@ -33,6 +33,9 @@ BOARD_VENDOR := oneplus
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
+# Bionic
+TARGET_LD_SHIM_LIBS := /system/vendor/lib64/lib-imscamera.so|libshim_camera.so:/system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so:/system/vendor/lib64/lib-imsvt.so|libshims_ims.so
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
 TARGET_NO_BOOTLOADER := true
