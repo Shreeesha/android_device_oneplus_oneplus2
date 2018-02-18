@@ -853,6 +853,10 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps oem_2950
     writepid /dev/cpuset/system-background/tasks
 
+service netmgrd /system/bin/netmgrd
+    class main
+    writepid /dev/cpuset/system-background/tasks
+
 service ipacm /system/bin/ipacm
     class main
     user net_admin
@@ -1013,11 +1017,4 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     user root
     group root
     disabled
-    writepid /dev/cpuset/system-background/tasks
-
-# Data Switch hack
-service netmgrd /system/bin/sh /system/etc/netmgrd_control.sh
-    class main
-    user root
-    group root wifi wakelock radio inet oem_2950
     writepid /dev/cpuset/system-background/tasks
