@@ -35,7 +35,8 @@ ro.bluetooth.wipower=true
 camera.disable_zsl_mode=1
 persist.camera.cpp.duplication=false
 vidc.debug.perf.mode=2
-vidc.enc.dcvs.extra-buff-count=2persist.camera.zsl.mode=0
+vidc.enc.dcvs.extra-buff-count=2
+persist.camera.zsl.mode=0
 persist.camera.hal.debug.mask=0
 media.camera.ts.monotonic=1
 camera2.portability.force_api=1
@@ -115,12 +116,10 @@ mmp.enable.3g2=true
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 
-# ims stuff
+# VoLTE and ViLTE props
 persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=0
-persist.data.iwlan.enable=true
-persist.dbg.wfc_avail_ovr=0
 
 # QC vendor extension
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -163,3 +162,4 @@ persist.timed.enable=true
 
 # Wifi
 persist.data.iwlan.enable=true
+persist.dbg.wfc_avail_ovr=0
