@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "PowerHAL_MSM8992_Ext"
+#define LOG_TAG "PowerHAL_MSM8994_Ext"
 
 #include <utils/Log.h>
 #include "utils.h"
@@ -22,7 +22,7 @@
 #define BIG_MIN_CPU_PATH "/sys/devices/system/cpu/cpu4/core_ctl/min_cpus"
 #define BIG_MAX_CPU_PATH "/sys/devices/system/cpu/cpu4/core_ctl/max_cpus"
 
-void cm_power_set_interactive_ext(int on)
+void power_set_interactive_ext(int on)
 {
     ALOGD("%sabling big CPU cluster", on ? "En" : "Dis");
     sysfs_write(BIG_MAX_CPU_PATH, on ? "4" : "0");
