@@ -37,7 +37,7 @@ TARGET_USE_SDCLANG := true
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
 # Bionic
-TARGET_LD_SHIM_LIBS := /system/vendor/lib64/lib-imscamera.so|libshim_camera.so:/system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so:/system/vendor/lib64/lib-imsvt.so|libshims_ims.so
+TARGET_LD_SHIM_LIBS := /system/vendor/lib64/lib-imscamera.so|libshim_camera.so:/system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so:libshim_ims-camera.so:/system/lib/libopcamerahw_interface.so|libshim_camera.so:/system/lib/libFNVfbEngineLib.so|libshim_camera.so:/system/vendor/lib64/lib-imsvt.so|libshims_ims.so:/system/lib/hw/camera.vendor.msm8994.so|libop2_cam.so
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
@@ -107,10 +107,9 @@ QCOM_BT_USE_SMD_TTY := true
 
 # Camera
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_MEDIA_EXTENSIONS := true
-BOARD_BUILD_OP2_CAMERA := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
