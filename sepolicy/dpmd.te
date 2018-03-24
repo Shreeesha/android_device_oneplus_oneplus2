@@ -1,3 +1,9 @@
-allow dpmd mm-qcamerad:dir search;
-allow dpmd mm-qcamerad:file read;
-dontaudit dpmd self:capability sys_ptrace;
+allow dpmd self:capability chown;
+allow dpmd qmuxd:unix_stream_socket connectto;
+allow dpmd qmuxd_socket:dir { add_name write search };
+allow dpmd qmuxd_socket:sock_file { create setattr write };
+allow dpmd socket_device:dir { add_name write };
+allow dpmd socket_device:sock_file { create setattr };
+allow dpmd self:capability { dac_override fsetid };
+allow dpmd self:udp_socket ioctl;
+allow dpmd serialno_prop:property_service set;

@@ -1,3 +1,3 @@
-allow mediacodec system_data_file:sock_file write;
 allow mediacodec mpctl_socket:dir search;
-allow mediacodec rootfs:lnk_file getattr;
+allow mediacodec mpctl_socket:sock_file write;
+allow mediacodec perfd:unix_stream_socket connectto;

@@ -1,0 +1,2 @@
+allow dataservice_app ipa_dev:chr_file { ioctl open read write };
+allow dataservice_app qtitetherservice_service:service_manager add;

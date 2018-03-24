@@ -2,6 +2,7 @@ on boot
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
     exec - root root system -- /system/bin/init.oneplus2.power.sh
+    seclabel u:r:init-power-sh:s0
 
 on charger
     write /sys/devices/system/cpu/cpu4/online 1
@@ -24,6 +25,7 @@ service charger /charger
     class charger
     group log
     writepid /dev/cpuset/system-background/tasks
+    seclabel u:r:charger:s0
 
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "bfq"

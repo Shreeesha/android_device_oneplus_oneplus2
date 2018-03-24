@@ -556,6 +556,7 @@ service zram-init /system/bin/sh /system/etc/init.zram.sh
     user root
     disabled
     oneshot
+    seclabel u:r:qti_init_shell:s0
 
 service thermal-engine /system/vendor/bin/thermal-engine
     class main
@@ -659,6 +660,7 @@ service usf-post-boot /system/bin/sh /system/etc/usf_post_boot.sh
     user root
     disabled
     oneshot
+    seclabel u:r:qti_init_shell:s0
 
 on property:init.svc.bootanim=running
     write /sys/module/lpm_levels/system/a53/cpu0/retention/idle_enabled 0
@@ -785,6 +787,7 @@ service start_hci_filter /system/bin/wcnss_filter
     user bluetooth
     group bluetooth oem_2950
     disabled
+    seclabel u:r:wcnss_filter:s0
 
 on property:wc_transport.start_root=true
     start hci_filter_root
@@ -802,6 +805,7 @@ service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
     class core
     user root
     oneshot
+    seclabel u:r:bluetooth_loader:s0
 
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
@@ -809,6 +813,7 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     group bluetooth net_bt_admin
     disabled
     oneshot
+    seclabel u:r:bluetooth_loader:s0
 
 on property:bluetooth.hciattach=true
     start hciattach
@@ -953,6 +958,7 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
     user root
     oneshot
+    seclabel u:r:qti_init_shell:s0
 
 service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start

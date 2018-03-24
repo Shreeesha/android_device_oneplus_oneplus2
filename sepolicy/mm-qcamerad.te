@@ -1,3 +1,6 @@
-allow mm-qcamerad cam_sysfs:file { open read write };
-allow mm-qcamerad stm_sensor:chr_file { ioctl open read };
-allow mm-qcamerad system_file:file execmod;
+# For text relocations in /system/vendor/lib/libmmcamera_faceproc.so
+allow mm-qcamerad vendor_file:file execmod;
+allow mm-qcamerad socket_device:sock_file write;
+allow mm-qcamerad permission_service:service_manager find;
+allow mm-qcamerad sensors_socket:sock_file read;
+allow mm-qcamerad self:tcp_socket { create bind setopt };

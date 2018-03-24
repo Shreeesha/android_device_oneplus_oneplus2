@@ -1,3 +1,19 @@
-allow init cam_sysfs:file relabelto;
 allow init proc_dirty_ratio:file write;
+allow init fpc_data_file:dir create;
+allow init firmware_file:blk_file read;
+allow init self:netlink_route_socket { create nlmsg_read read write };
+allow init ipa_dev:chr_file { ioctl open read };
 allow init proc_kernel_sched:file write;
+
+allow init diag_device:chr_file { ioctl write };
+allow init property_socket:sock_file write;
+allow init self:socket { create read write };
+allow init sensors_persist_file:file append;
+allow init proc_interrupts:file getattr;
+allow init smem_log_device:chr_file { ioctl write };
+allow init socket_device:sock_file { create setattr write };
+allow init sensors_device:chr_file ioctl;
+allow init serial_device:chr_file { ioctl write };
+
+# required for LD_SHIM_LIBS
+allow init { domain -lmkd -crash_dump }:process noatsecure;
