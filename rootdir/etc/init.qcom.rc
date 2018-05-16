@@ -859,7 +859,7 @@ service qmuxd /system/bin/qmuxd
 service netmgrd /system/bin/netmgrd
     class main
     user root
-    group root wifi wakelock radio inet oem_2950
+    group root system wifi wakelock radio inet oem_2950
     writepid /dev/cpuset/system-background/tasks
 
 service ipacm /system/bin/ipacm
